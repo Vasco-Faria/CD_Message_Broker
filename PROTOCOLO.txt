@@ -1,0 +1,25 @@
+metodo SUBSCRIBE- Mensagem de  Subscrição  de um topico:
+{'method': 'SUBSCRIBE','topic': topic, 'value': value}
+Resposta- envia para o cliente a ultima Mensagem:
+{'method': 'SUBSCRIBE_REP','topic': topic, 'value': value}
+
+
+metodo PUBLISH- Mensagem de Publicação num tópico:
+{'method': 'PUBLISH','topic': topic, 'value': value}
+Resposta- envia a Mensagem que tem de ser publicada para todos os topicos:
+{'method': 'PUBLISH_REP','topic': topic, 'value': value}
+
+
+método LIST_TOPICS- Mensagem de Pedido de Listagem de tópicos:
+{'method': 'LIST_TOPICS','topic': topic, 'value': value}
+Resposta- envia a lista de topicos de onde ja foram enviadas mensagens
+{'method': 'LIST_TOPICS_REP','topic': topic, 'value': value}
+
+
+metodo CANCEL_SUBSC- Mensagem de Cancelamento de Subscrição de um tópico
+{'method': 'CANCEL','topic': topic, 'value': value}
+
+
+
+enviar o tipo de serializacao ( se é Xml, JSON, PICKLE)
+{"method" : "serialization", "type" : value} 
